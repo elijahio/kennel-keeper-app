@@ -4,7 +4,7 @@ A collaborative project for KU Coding Bootcamp, 2017.
 
 ## Contributors
 
-- <a href="https://elijah.io" title="Elijah's Website" alt="Elijah's Website" target="_blank">Elijah Kleinsmith</a>
+- [Elijah Kleinsmith](https://elijah.io)
 - Jared Morgan
 - Meg O'Roark
 - Rhia Dixon
