@@ -25,4 +25,5 @@ Start Express:
 Start React:
 
 - cd 'client'
+- `npm install`
 - `npm start`
