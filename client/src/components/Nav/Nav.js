@@ -17,7 +17,7 @@ const Nav = () =>
           <a href="/aboutUs" className="navbar-brand aboutUs">
           About Us 
           </a>
-          <a href="https://github.com/elijahio/kennel-keeper" target="_blank" rel="noopener noreferrer" className="navbar-brand aboutUs">
+          <a href="https://github.com/elijahio/kennel-keeper-app" target="_blank" rel="noopener noreferrer" className="navbar-brand aboutUs">
           Github 
           </a>
           <a href="/login" className="navbar-brand aboutUs">
