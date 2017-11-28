@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Nav from "./components/Nav";
-import Banner from "./components/Banner";
+// import Banner from "./components/Banner";
+import Landing from "./Pages/Landing";
 
 
 class App extends Component {
@@ -10,9 +11,9 @@ class App extends Component {
     return (
       <div className="App">
        <Nav />
-          <Banner />
+       <Landing />
           <p className="App-intro">
-            To get started, edit <code>src/App.js</code> and save to reload.
+             To get started, edit <code>src/App.js</code> and save to reload.
           </p>
       </div>
     );
