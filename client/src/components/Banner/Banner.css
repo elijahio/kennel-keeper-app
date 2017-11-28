@@ -1,0 +1,31 @@
+.jumbotron {
+	background: linear-gradient(
+		rgba(0, 0, 0, 0.45),
+		rgba(0, 0, 0, 0.45)),
+	url(https://cdn.stocksnap.io/img-thumbs/960w/O6W4QJZFEB.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    border-radius: 0px !important;
+    margin-bottom: 0px;
+}
+
+.jumbotron h1, h2, p, .btn {
+	color: white;
+}
+
+@media (min-width: 1370px) {
+	.jumbotron p {
+		margin-left: 25%;
+		margin-right: 25%;
+	}
+}
+
+@media (max-width: 1370px) {
+	.jumbotron p {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}

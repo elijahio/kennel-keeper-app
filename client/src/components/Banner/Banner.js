@@ -1,7 +1,8 @@
 import React from "react";
+import "./Banner.css";
 
 const Banner = ({ children }) =>
-  <div style={{ height: 300 }} className="jumbotron">
+  <div className="jumbotron">
     {children}
   </div>;
 

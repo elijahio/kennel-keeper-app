@@ -1,0 +1,14 @@
+.navbar {
+	margin-bottom: 0px;
+	border-radius: 0px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.footer-links a, p {
+	color: white;
+}
+
+.bullets:hover {
+	text-decoration: none;
+}

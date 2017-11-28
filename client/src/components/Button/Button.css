@@ -1,4 +1,10 @@
 .btn {
   border: 1px solid black;
   margin: 2px;
+  border-color: white;
+}
+
+.btn:hover {
+	color: black;
+	background-color: white;
 }
