@@ -4,19 +4,18 @@ import "./Footer.css";
 const Footer = () =>
 
 	<footer className="navbar footer">
-		<div className="container-fluid footer">
 			<div className="footer-links">
-				<a href="#" className="small-links MIT">
-				MIT License &#x25CF;
-				</a>
-				<a href="#" className="small-links Privacy">
-				Privacy Policy &#x25CF;
-				</a>
-				<a href="#" className="small-links Volunteer">
-				Volunteer
-				</a>
+				<a href="https://github.com/elijahio/kennel-keeper-app/blob/master/LICENSE"
+				target="_blank"className="small-links MIT">MIT License</a>
+
+				<a className="bullets">&nbsp; &#x25CF; &nbsp;</a>
+
+				<a href="#" className="small-links Privacy">Privacy Policy</a>
+
+				<a className="bullets">&nbsp; &#x25CF; &nbsp;</a>
+				
+				<a href="#" className="small-links Volunteer">Volunteer</a>
 			</div>
-		</div>
 	</footer>
 ;
 
