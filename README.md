@@ -22,12 +22,16 @@ This project is a collaborative effort completed for KU Coding Bootcamp, 2017.
 
 Start Express:
 
-- cd 'kennel-keeper'
+- `cd kennel-keeper`
 - `npm install`
 - `npm start`
 
 Start React:
 
-- cd 'client'
+- `cd client`
 - `npm install`
 - `npm start`
+
+## Troubleshooting
+
+- Having trouble starting the React application? With this app in active development, your `node_modules` folder may be out of date. Try `cd kennel-keeper/client`, then `rm -r node_modules` and finally `npm install`. Repeat the "Run Locally" steps to see if this resolved the issue.
