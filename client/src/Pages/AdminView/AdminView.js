@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import Banner from "../../components/Banner";
 import Button from "../../components/Button";
 import ProfilePhoto from "../../components/ProfilePhoto";
+import { GenTaskList, GenListItem } from "../../components/GenTaskList";
 import "./AdminView.css";
 
-class AdminView extends Component {
 
+
+class AdminView extends Component {
 
 	render(){
 		return(
@@ -24,6 +26,27 @@ class AdminView extends Component {
                     <ProfilePhoto />
                   </div>
 	      				</Banner>
+                 <div className="row">
+                    <div className="col-md-4">
+                      <h3>Tasks Available</h3>
+                      <h5><em>Click to enter or clear a task</em></h5>
+                      <GenTaskList> 
+                        <GenListItem> Dummy info </GenListItem>
+                        <GenListItem> Dummy info </GenListItem>
+                        <GenListItem> Dummy info </GenListItem>
+                        <GenListItem> Dummy info </GenListItem>
+                        <GenListItem> Dummy info </GenListItem>
+                        <GenListItem> Dummy info </GenListItem>
+                      </GenTaskList>
+                    </div>
+                    <div className="col-md-8">
+                      <h3>Animal Profiles</h3>
+                      <h5><em>Click to see details and edit.</em></h5>
+                      <ProfilePhoto />
+                      <ProfilePhoto />
+                      <ProfilePhoto />
+                    </div>
+                  </div>
           		</div>
           	</div>
         </div>
