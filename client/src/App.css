@@ -41,3 +41,14 @@
   margin-left: 0px;
   margin-right: 0px;
 }
+
+.center-parent {
+  position: relative;
+}
+.center-child {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}

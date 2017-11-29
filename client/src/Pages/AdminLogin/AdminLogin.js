@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Login from "../../components/Login";
+import Button from "../../components/Button";
 
 class AdminLogin extends Component {
 
@@ -8,7 +10,9 @@ class AdminLogin extends Component {
 			 <div className="container-fluid">
         		<div className="row">
           			<div className="col-md-12">
-	          			<h1>Administrator Login</h1>
+	          			<Login>
+	          			  
+	      				</Login>
           			</div>
           		</div>
           	</div>

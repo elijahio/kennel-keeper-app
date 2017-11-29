@@ -3,6 +3,8 @@
 	border-radius: 0px;
 	padding-left: 30px;
 	padding-right: 30px;
+	background-color: #152735;
+	border-width: 0px;
 }
 
 .footer-links a, p {
@@ -11,4 +13,14 @@
 
 .bullets:hover {
 	text-decoration: none;
+}
+
+.navbar>.container-fluid .navbar-brand {
+	margin-left: 0px;
+	color: white;
+}
+
+.navbar-inverse .navbar-brand:hover {
+	margin-left: 0px;
+	color: #769cb1;
 }
