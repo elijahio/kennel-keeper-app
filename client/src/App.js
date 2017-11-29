@@ -6,6 +6,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Landing from "./Pages/Landing";
 import AdminLogin from "./Pages/AdminLogin";
+import AdminView from "./Pages/AdminView";
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Landing} />
             <Route exact path="/admin" component={AdminLogin} />
+            <Route exact path="/adminView" component={AdminView} />
           </Switch>
           <Footer />
         </div>
