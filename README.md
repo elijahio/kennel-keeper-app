@@ -13,8 +13,10 @@ This project is a collaborative effort completed for KU Coding Bootcamp, 2017.
 
 ## Technologies
 
-- Express
+- Node.js
+- Express.js
 - React
+- MongoDB
 
 ## Run Locally
 
