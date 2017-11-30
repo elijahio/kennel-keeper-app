@@ -4,8 +4,7 @@ import Button from "../../components/Button";
 import ProfilePhoto from "../../components/ProfilePhoto";
 import { GenTaskList, GenListItem } from "../../components/GenTaskList";
 import "./AdminView.css";
-
-
+import { Input, TextArea, FormBtn } from "../../components/Form";
 
 class AdminView extends Component {
 
@@ -25,28 +24,43 @@ class AdminView extends Component {
                     <ProfilePhoto />
                     <ProfilePhoto />
                   </div>
-	      				</Banner>
-                 <div className="row">
-                    <div className="col-md-4">
-                      <h3>Tasks Available</h3>
-                      <h5><em>Click to enter or clear a task</em></h5>
-                      <GenTaskList> 
-                        <GenListItem> Dummy info </GenListItem>
-                        <GenListItem> Dummy info </GenListItem>
-                        <GenListItem> Dummy info </GenListItem>
-                        <GenListItem> Dummy info </GenListItem>
-                        <GenListItem> Dummy info </GenListItem>
-                        <GenListItem> Dummy info </GenListItem>
-                      </GenTaskList>
+	      			
+                   <div className="row">
+                      <div className="col-md-4">
+                        <h3>Tasks Available</h3>
+                        <h5><em>Click to enter or clear a task</em></h5>
+                        <form className="form-inline">
+                          <Input
+                            // value={this.state.task}
+                            // onChange={this.handleInputChange}
+                            name="task"
+                            placeholder="New Task"
+                          />
+                          <FormBtn
+                            // disabled={!(this.state.task)}
+                            // onClick={this.handleFormSubmit}
+                          >
+                            Add
+                          </FormBtn>
+                        </form>
+                        <GenTaskList> 
+                          <GenListItem> Dummy info </GenListItem>
+                          <GenListItem> Dummy info </GenListItem>
+                          <GenListItem> Dummy info </GenListItem>
+                          <GenListItem> Dummy info </GenListItem>
+                          <GenListItem> Dummy info </GenListItem>
+                          <GenListItem> Dummy info </GenListItem>
+                        </GenTaskList>
+                      </div>
+                      <div className="col-md-8">
+                        <h3>Animal Profiles</h3>
+                        <h5><em>Click to see details and edit.</em></h5>
+                        <ProfilePhoto />
+                        <ProfilePhoto />
+                        <ProfilePhoto />
+                      </div>
                     </div>
-                    <div className="col-md-8">
-                      <h3>Animal Profiles</h3>
-                      <h5><em>Click to see details and edit.</em></h5>
-                      <ProfilePhoto />
-                      <ProfilePhoto />
-                      <ProfilePhoto />
-                    </div>
-                  </div>
+                  </Banner>
           		</div>
           	</div>
         </div>
