@@ -8,6 +8,7 @@ import Landing from "./Pages/Landing";
 import AdminLogin from "./Pages/AdminLogin";
 import AdminView from "./Pages/AdminView";
 import UserView from "./Pages/UserView";
+import DogView from "./Pages/DogView";
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
             <Route exact path="/admin" component={AdminLogin} />
             <Route exact path="/adminView" component={AdminView} />
             <Route exact path="/userView" component={UserView} />
+            <Route exact path="/dogView" component={DogView} />
           </Switch>
           <Footer />
         </div>
