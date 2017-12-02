@@ -1,9 +1,9 @@
 import React from "react";
 import "./Login.css";
 
-const Login = ({ children }) =>
-  <div className="jumbotron">
-    {children}
-  </div>;
+const Login = () =>
+	<div className="container">
+
+	</div>
 
 export default Login;

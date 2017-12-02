@@ -1,0 +1,17 @@
+.jumbotron h1, h2, p, .btn {
+	color: white;
+}
+
+@media (min-width: 1370px) {
+	.jumbotron p {
+		margin-left: 25%;
+		margin-right: 25%;
+	}
+}
+
+@media (max-width: 1370px) {
+	.jumbotron p {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
