@@ -20,21 +20,21 @@ This project is a collaborative effort completed for KU Coding Bootcamp, 2017.
 
 ## Run Locally
 
-Start Express:
+#### Start Express:
 
 - `cd kennel-keeper`
 - `npm install`
 - `npm start`
 
-Start React:
+#### Start React:
 
 - `cd client`
 - `npm install`
 - `npm start`
 
-Seed Database (from project root):
-Note, running this command will wipe out any existing data in the database.
-Only use if seeds are needed.
+#### Seed Database:
+###### Note: running this command will wipe out any existing data in the database. Only use if seeds are needed.
+- `cd kennel-keeper`
 - `seed`
 
 ## Troubleshooting
