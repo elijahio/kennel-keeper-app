@@ -3,6 +3,7 @@ import Banner from "../../components/Banners/LandingBanner";
 import Button from "../../components/Button";
 import ProfilePhoto from "../../components/ProfilePhoto";
 import DogTaskList from "../../components/DogTaskList";
+import DogTimeList from "../../components/DogTimeList";
 import "./DogView.css";
 
 class DogView extends Component {
@@ -17,7 +18,7 @@ class DogView extends Component {
 								<div className="col-md-4">
 								  <ProfilePhoto className="dogInfo" />
 								</div>
-								<div class="col-md-8">
+								<div className="col-md-8">
 									<h3>Name:</h3>
 									<h5>Notes:</h5>
 								</div>
@@ -26,6 +27,10 @@ class DogView extends Component {
 								<div className="col-md-6">
 									<p>Check if done during your shift.</p>
 									<DogTaskList />
+								</div>
+								<div className="col-md-6">
+									<p>Duration of each activity and total time</p>
+									<DogTimeList />
 								</div>
 							</div>
 						</Banner>
