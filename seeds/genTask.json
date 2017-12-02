@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Sweep Kennel",
+    "completed": false
+  },
+  {
+    "name": "Mop Kennel",
+    "completed": false
+  },
+  {
+    "name": "Take Out Trash",
+    "completed": false
+  }
+]

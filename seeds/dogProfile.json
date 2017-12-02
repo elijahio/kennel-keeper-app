@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Samson",
+    "photo": "https://cdn.pixabay.com/photo/2017/11/29/20/16/dog-2987024_1280.jpg",
+    "meds": false,
+    "swept": false,
+    "mopped": false,
+    "bedding": false,
+    "cleanedOutdoor": false,
+    "sprayedOutdoor": false,
+    "walk": false,
+    "outing": false,
+    "play": false,
+    "cuddling": false,
+    "training": false
+  },
+  {
+    "name": "Muffin",
+    "photo": "https://cdn.pixabay.com/photo/2017/11/21/19/40/dog-2969033_1280.jpg",
+    "meds": false,
+    "swept": false,
+    "mopped": false,
+    "bedding": false,
+    "cleanedOutdoor": false,
+    "sprayedOutdoor": false,
+    "walk": false,
+    "outing": false,
+    "play": false,
+    "cuddling": false,
+    "training": false
+  },
+  {
+    "name": "Wishbone",
+    "photo": "https://d1o51r9qdgnnlz.cloudfront.net/static_image/70278ca5-4c04-4979-902d-f771830b353b/static.jpg",
+    "meds": false,
+    "swept": false,
+    "mopped": false,
+    "bedding": false,
+    "cleanedOutdoor": false,
+    "sprayedOutdoor": false,
+    "walk": false,
+    "outing": false,
+    "play": false,
+    "cuddling": false,
+    "training": false 
+  }
+]
