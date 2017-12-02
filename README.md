@@ -7,7 +7,7 @@ This project is a collaborative effort completed for KU Coding Bootcamp, 2017.
 ## Contributors
 
 - [Elijah Kleinsmith](https://elijah.io)
-- Jared Morgan
+- [Jared Morgan](https://github.com/CptMorganz)
 - Meg O'Roark
 - Rhia Dixon
 
