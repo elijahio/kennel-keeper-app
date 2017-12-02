@@ -19,15 +19,20 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
-// Set up promises with mongoose
-mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/generaltasklist",
+  process.env.MONGODB_URI || "mongodb://localhost/kkdb",
   {
     useMongoClient: true
   }
 );
+// Set up promises with mongoose
+mongoose.Promise = global.Promise;
+//Get the default connection
+var db = mongoose.connection;
+
+//Bind connection to error event (to get notification of connection errors)
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 app.listen(port);
 
