@@ -33,7 +33,8 @@ This project is a collaborative effort completed for KU Coding Bootcamp, 2017.
 - `npm start`
 
 #### Seed Database:
-###### Note: running this command will wipe out any existing data in the database. Only use if seeds are needed.
+Note: running this command will wipe out any existing data in the database. Only use if seeds are needed.
+
 - `cd kennel-keeper`
 - `seed`
 
