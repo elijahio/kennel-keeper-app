@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import Banner from "../../components/Banner";
+import Banner from "../../components/Banners/LandingBanner";
 import Button from "../../components/Button";
+import "./Landing.css";
 
 class Landing extends Component {
 
