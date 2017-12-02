@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Elijah",
+  	"email": "elijah@gmail.com",
+  	"phone": "123456789",
+    "adminStatus": true
+  },
+  {
+    "name": "Megan",
+  	"email": "meg@gmail.com",
+  	"phone": "987654321",
+    "adminStatus": true
+  },
+  {
+    "name": "Jared",
+  	"email": "jared@gmail.com",
+  	"phone": "132645789",
+    "adminStatus": false
+  },
+  {
+    "name": "Rhia",
+  	"email": "rhia@gmail.com",
+  	"phone": "789456321",
+    "adminStatus": false
+  }
+]

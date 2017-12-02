@@ -32,6 +32,11 @@ Start React:
 - `npm install`
 - `npm start`
 
+Seed Database (from project root):
+Note, running this command will wipe out any existing data in the database.
+Only use if seeds are needed.
+- `seed`
+
 ## Troubleshooting
 
 - Having trouble starting the React application? With this app in active development, your `node_modules` folder may be out of date. Try `cd kennel-keeper/client`, then `rm -r node_modules` and finally `npm install`. Repeat the "Run Locally" steps to see if this resolved the issue.
