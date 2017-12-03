@@ -26,16 +26,23 @@ This project is a collaborative effort completed for KU Coding Bootcamp, 2017.
 - `npm install`
 - `npm start`
 
-#### Start React:
+#### Setup React:
 
 - `cd client`
 - `npm install`
 - `npm start`
 
-#### Seed Database:
-*Note: running this command will wipe out any existing data in the database. Only use if seeds are needed.*
+#### Start Database:
 
+- `npm install -g node-mongo-seeds`
+- `mongod`
+- `mongo`
+- `use kkdb`
 - `cd kennel-keeper`
+
+#### Seed Database:
+*Note: running `seed` will wipe out any existing data in the database. Only use if seeds are needed.*
+
 - `seed`
 
 ## Troubleshooting
