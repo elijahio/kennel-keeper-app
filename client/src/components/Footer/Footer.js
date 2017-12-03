@@ -10,10 +10,7 @@ const Footer = () =>
 
 				<a className="bullets">&nbsp; &#x25CF; &nbsp;</a>
 
-				<a href="#" className="small-links Privacy">Privacy Policy</a>
-
-				<a className="bullets">&nbsp; &#x25CF; &nbsp;</a>
-				
+				<a href="#" className="small-links Privacy">Privacy Policy</a>				
 			</div>
 	</footer>
 ;
