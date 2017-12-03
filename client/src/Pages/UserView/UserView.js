@@ -34,6 +34,8 @@ class UserView extends Component {
 			                      <ProfilePhoto />
 			                      <ProfilePhoto />
 			                      <ProfilePhoto />
+			                      <ProfilePhoto />
+			                      <ProfilePhoto />
 			                    </div>
 			                </div>
 			            </Banner>
