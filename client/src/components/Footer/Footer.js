@@ -5,12 +5,8 @@ const Footer = () =>
 
 	<footer className="navbar footer">
 			<div className="footer-links">
-				<a href="https://github.com/elijahio/kennel-keeper-app/blob/master/LICENSE"
-				target="_blank"className="small-links MIT">MIT License</a>
-
-				<a className="bullets">&nbsp; &#x25CF; &nbsp;</a>
-
-				<a href="#" className="small-links Privacy">Privacy Policy</a>				
+				<p>Open Source <a href="https://github.com/elijahio/kennel-keeper-app/blob/master/LICENSE"
+				target="_blank"className="small-links MIT">(View MIT License)</a></p>
 			</div>
 	</footer>
 ;

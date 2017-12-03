@@ -24,3 +24,30 @@
 	margin-left: 0px;
 	color: #769cb1;
 }
+
+.nav-header {
+	margin-top: -3px;
+}
+
+@media (max-width: 767px) {
+	div.navbar-links {
+		display: none;
+	}
+	.navbar {
+		height: 10px;
+	}
+	div.navbar-mobile-links {
+		margin-top: -50px;
+		margin-right: -10px;
+	}
+}
+
+@media (min-width: 768px) {
+	div.navbar-mobile-links {
+		display: none;
+	}
+}
+
+.fa .fa-github {
+	color: white;
+}
