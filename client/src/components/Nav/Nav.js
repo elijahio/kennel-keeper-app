@@ -14,7 +14,6 @@ const Nav = () =>
       <div className="navbar-links" style={navLinkStyle}>
       <a href="/aboutUs" className="navbar-brand aboutUs">About Us</a>
       <a href="https://github.com/elijahio/kennel-keeper-app" target="_blank" rel="noopener noreferrer" className="navbar-brand aboutUs">Github</a>
-      <a href="/login" className="navbar-brand aboutUs">Login</a>
     </div>
   </div>
 </nav>

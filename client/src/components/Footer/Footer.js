@@ -14,7 +14,6 @@ const Footer = () =>
 
 				<a className="bullets">&nbsp; &#x25CF; &nbsp;</a>
 				
-				<a href="#" className="small-links Volunteer">Volunteer</a>
 			</div>
 	</footer>
 ;
