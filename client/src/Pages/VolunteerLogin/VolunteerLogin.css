@@ -1,0 +1,14 @@
+#login-banner {
+	background: linear-gradient(
+		rgba(0, 0, 0, 0.65),
+		rgba(0, 0, 0, 0.65)),
+	url(../../images/check.jpg) !important;
+	background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    border-radius: 0px !important;
+    margin-bottom: 0px;
+    padding: 10px 0px;
+}
