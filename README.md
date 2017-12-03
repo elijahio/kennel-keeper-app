@@ -8,7 +8,7 @@ This project is a collaborative effort completed for KU Coding Bootcamp, 2017.
 
 - [Elijah Kleinsmith](https://elijah.io)
 - [Jared Morgan](https://github.com/CptMorganz)
-- [Meg O'Roark]()
+- [Meg O'Roark](https://github.com/msoroark)
 - [Rhia Dixon](https://risaco.github.io/)
 
 ## Technologies
