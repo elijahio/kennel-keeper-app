@@ -9,6 +9,7 @@ import AdminLogin from "./Pages/AdminLogin";
 import AdminView from "./Pages/AdminView";
 import UserView from "./Pages/UserView";
 import DogView from "./Pages/DogView";
+import VolunteerLogin from "./Pages/VolunteerLogin";
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
             <Route exact path="/adminView" component={AdminView} />
             <Route exact path="/userView" component={UserView} />
             <Route exact path="/dogView" component={DogView} />
+            <Route exact path="/volunteer" component={VolunteerLogin} />
           </Switch>
           <Footer />
         </div>

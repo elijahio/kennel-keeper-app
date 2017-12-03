@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import Login from "../../components/Login";
 import Button from "../../components/Button";
 import LoginBanner from "../../components/Banners/LoginBanner";
-import "./AdminLogin.css";
+import "./VolunteerLogin.css";
 
-class AdminLogin extends Component {
+class VolunteerLogin extends Component {
 
 
 	render(){
@@ -14,7 +14,7 @@ class AdminLogin extends Component {
           			<div className="col-md-12">
 	          			<LoginBanner>
 	          			  	<div className="center-child">
-	          			  		<h2>Administrator Login</h2>
+	          			  		<h2>Volunteer Login</h2>
 		          			  <Login></Login>
       						</div>
 	      				</LoginBanner>
@@ -24,4 +24,4 @@ class AdminLogin extends Component {
 			);
 	}
 }
-export default AdminLogin;
+export default VolunteerLogin;
