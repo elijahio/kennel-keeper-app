@@ -1,5 +1,7 @@
-{
+[
+	{
 	"undefined": "localhost/kkdb",
 	"dev": "localhost/kkdb",
 	"prod": "localhost/kkdb"
-}
+	}
+]
