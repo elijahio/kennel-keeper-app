@@ -8,6 +8,8 @@ import { Input, TextArea, FormBtn } from "../../components/Form";
 
 class AdminView extends Component {
 
+
+
 	render(){
 		return(
 			 <div className="container-fluid">
