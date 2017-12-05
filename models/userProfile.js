@@ -8,7 +8,8 @@ const userProfileSchema = new Schema({
 	email: { type: String, required: true },
 	phone: { type: String, required: true },
   adminStatus: { type: Boolean, default: false }
-});
+},
+{ collection : 'userProfile' });
 
 const userProfile = mongoose.model("userProfile", userProfileSchema);
 
