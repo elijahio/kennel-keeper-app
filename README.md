@@ -45,6 +45,11 @@ This project is a collaborative effort completed for KU Coding Bootcamp, 2017.
 
 - `seed`
 
+#### Ports Used:
+- `:5000` Express
+- `:3000` React
+- `:27017` Mongo
+
 ## Troubleshooting
 
 - Having trouble starting the React application? With this app in active development, your `node_modules` folder may be out of date. Try `cd kennel-keeper/client`, then `rm -r node_modules` and finally `npm install`. Repeat the "Run Locally" steps to see if this resolved the issue.
