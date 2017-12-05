@@ -3,7 +3,7 @@ import "./Login.css";
 
 const Login = () =>
 
-<div>
+<form method="GET" action="/adminview">
 	<div>
 		<label for="username"></label>
 	    <input type="text" id="username" placeholder="Username"></input>
@@ -15,6 +15,6 @@ const Login = () =>
     <div>
     	<input type="submit" value="Submit" id="submit"></input>
     </div>
-</div>
+</form>
 
 export default Login;

@@ -14,7 +14,7 @@ class AdminLogin extends Component {
           			<div className="col-md-12">
 	          			<LoginBanner>
 	          			  	<div className="center-child">
-	          			  		<h2>Administrator Login</h2>
+	          			  		<h2><i class="fa fa-unlock-alt" aria-hidden="true"></i>&nbsp;Login</h2>
 		          			  <Login></Login>
       						</div>
 	      				</LoginBanner>

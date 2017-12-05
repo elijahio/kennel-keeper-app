@@ -18,8 +18,7 @@ class Landing extends Component {
 	      						It allows admin to view which volunteer is on shift, what
 	      						general or animal specific tasks they've completed, and
 	      						have yet to complete.</p>
-      							<a href="/admin" title="Administrator Login" alt="Administrator Login"><Button>ADMINISTRATOR LOGIN</Button></a>
-      							<a href="/volunteer" title="Volunteer Login" alt="Volunteer Login"><Button>VOLUNTEER LOGIN</Button></a>
+      							<a href="/admin" title="Login" alt="Login"><Button><i className="fa fa-unlock-alt" aria-hidden="true"></i>&nbsp;&nbsp;DEMO LOGIN</Button></a>
 	      					</div>
 	      				</LandingBanner>
           			</div>
