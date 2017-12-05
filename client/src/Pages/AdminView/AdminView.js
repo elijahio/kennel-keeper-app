@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Banner from "../../components/Banners/LandingBanner";
+import Banner from "../../components/Banners/LoginBanner";
 import Button from "../../components/Button";
 import ProfilePhoto from "../../components/ProfilePhoto";
 import { GenTaskList, GenListItem } from "../../components/GenTaskList";
