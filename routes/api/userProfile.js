@@ -7,7 +7,7 @@ router.route("/")
   .get(userProfileController.findAll)
   .post(userProfileController.create);
 
-// Route for "/api/userProfile/:id" -- individual dog
+// Route for "/api/userProfile/:id" -- individual user
 router.route("/:id")
   .get(userProfileController.findById)
   .put(userProfileController.update)
