@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Banner from "../../components/Banners/LandingBanner";
 import Button from "../../components/Button";
 import ProfilePhoto from "../../components/ProfilePhoto";
-import DogTaskList from "../../components/DogTaskList";
+import { DogTaskList, DogTaskItem } from "../../components/DogTaskList";
 import DogTimeList from "../../components/DogTimeList";
 import "./DogView.css";
 
@@ -26,7 +26,11 @@ class DogView extends Component {
 							<div className="row">
 								<div className="col-md-6">
 									<p>Check if done during your shift.</p>
-									<DogTaskList />
+									<DogTaskList>
+										<DogTaskItem>
+										Test 
+										</DogTaskItem>
+									</DogTaskList>
 								</div>
 								<div className="col-md-6">
 									<p>Duration of each activity and total time</p>
