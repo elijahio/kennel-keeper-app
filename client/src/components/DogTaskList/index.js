@@ -1,1 +1,2 @@
-export { default } from "./DogTaskList";
+export * from "./DogTaskList";
+export * from "./DogTaskItem";

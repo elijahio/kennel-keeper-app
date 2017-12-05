@@ -9,104 +9,60 @@ export const DogTimeList = ({children}) => {
 		<table className="table table-bordered table-dark">
 			<thead>
 			    <tr>
-			      <th scope="col">Walk</th>
-			      <th scope="col">Outing</th>
-			      <th scope="col">Yard Play</th>
-			      <th scope="col">Cuddling</th>
-			      <th scope="col">Training</th>
-			      <th scope="col">Total Time</th>
-			     </tr>
-			   </thead>
+			      <th scope="col">Task</th>
+			      <th scope="col">1st Shift</th>
+			      <th scope="col">2nd Shift</th>
+			      <th scope="col">3rd Shift</th>
+			      <th scope="col">4th Shift</th>
+			    </tr>
+			</thead>
 			    <tbody>
 			    	<tr>
-			    		<td>
-				    		<div className="dropdown">
-							  <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-							    Time
-							    <span className="caret"></span>
-							  </button>
-							  <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
-							    <li><a href="#">5 minutes</a></li>
-							    <li><a href="#">10 minutes</a></li>
-							    <li><a href="#">15 minutes</a></li>
-							    <li><a href="#">15 minutes</a></li>
-							  </ul>
-							</div>
-			    		</td>
-			    		<td>		
-			    			<div className="dropdown">
-							  <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-							    Time
-							    <span className="caret"></span>
-							  </button>
-							  <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
-							    <li><a href="#">5 minutes</a></li>
-							    <li><a href="#">10 minutes</a></li>
-							    <li><a href="#">15 minutes</a></li>
-							    <li><a href="#">15 minutes</a></li>
-							  </ul>
-							</div>
-						</td>
-			    		<td>		
-			    		<div className="dropdown">
-							  <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-							    Time
-							    <span className="caret"></span>
-							  </button>
-							  <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
-							    <li><a href="#">5 minutes</a></li>
-							    <li><a href="#">10 minutes</a></li>
-							    <li><a href="#">15 minutes</a></li>
-							    <li><a href="#">15 minutes</a></li>
-							  </ul>
-							</div>
-						</td>
-			    		<td>		
-			    			<div className="dropdown">
-							  <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-							    Time
-							    <span className="caret"></span>
-							  </button>
-							  <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
-							    <li><a href="#">5 minutes</a></li>
-							    <li><a href="#">10 minutes</a></li>
-							    <li><a href="#">15 minutes</a></li>
-							    <li><a href="#">15 minutes</a></li>
-							  </ul>
-							</div>
-						</td>
-			    		<td>		
-			    			<div className="dropdown">
-							  <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-							    Time
-							    <span className="caret"></span>
-							  </button>
-							  <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
-							    <li><a href="#">5 minutes</a></li>
-							    <li><a href="#">10 minutes</a></li>
-							    <li><a href="#">15 minutes</a></li>
-							    <li><a href="#">15 minutes</a></li>
-							  </ul>
-							</div>
-						</td>
-			    		<td>		
-			    			<div className="dropdown">
-							  <button className="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-							    Time
-							    <span className="caret"></span>
-							  </button>
-							  <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
-							    <li><a href="#">5 minutes</a></li>
-							    <li><a href="#">10 minutes</a></li>
-							    <li><a href="#">15 minutes</a></li>
-							    <li><a href="#">15 minutes</a></li>
-							  </ul>
-							</div>
-						</td>
+			    		<th scope="row">Walk:</th>
+			    		<td />
+			    		<td />
+			    		<td />
+			    		<td />
 			    	</tr>
-			 </tbody>
+			    	<tr>
+			    		<th scope="row">Outing:</th>
+			    		<td />
+			    		<td />
+			    		<td />
+			    		<td />
+			    	</tr>
+			    	<tr>
+			    		<th scope="row">Play:</th>
+			    		<td />
+			    		<td />
+			    		<td />
+			    		<td />
+			    	</tr>
+			    	<tr>
+			    		<th scope="row">Cuddling:</th>
+			    		<td />
+			    		<td />
+			    		<td />
+			    		<td />
+			    	</tr>
+			    	<tr>
+			    		<th scope="row">Training:</th>
+			    		<td />
+			    		<td />
+			    		<td />
+			    		<td />
+			    	</tr>
+			    	<tr>
+			    		<th scope="row">Total Time:</th>
+			    		<td />
+			    		<td />
+			    		<td />
+			    		<td />
+			    	</tr>
+			 	</tbody>
 
-		</table>
+
+			</table>
 		);
 };
 
