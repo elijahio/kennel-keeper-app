@@ -15,7 +15,8 @@ const dogProfileSchema = new Schema({
   play: { type: Boolean, default: false },
   cuddling: { type: Boolean, default: false },
   training: { type: Boolean, default: false }
-});
+},
+{ collection : 'dogProfile' });
 
 const dogProfile = mongoose.model("dogProfile", dogProfileSchema);
 
