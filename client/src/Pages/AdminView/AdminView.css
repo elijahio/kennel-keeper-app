@@ -1,6 +1,6 @@
 .volunteerPanel {
 	background: rgba(255, 255, 255, 0.3);
-	color: rgba(255, 255, 255, 0.8);
+	color: red;
 	padding-bottom: 20px;
 
 }
@@ -8,4 +8,8 @@
 .smallDog {
 	height: 100px;
 	width: 100px;
+},
+
+body {
+	background-color: black;
 }
