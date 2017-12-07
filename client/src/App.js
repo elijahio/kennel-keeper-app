@@ -22,7 +22,7 @@ class App extends Component {
             <Route exact path="/admin" component={AdminLogin} />
             <Route exact path="/adminView" component={AdminView} />
             <Route exact path="/userView" component={UserView} />
-            <Route exact path="/dogView" component={DogView} />
+            <Route exact path="/dogView/:id" component={DogView} />
             <Route exact path="/volunteer" component={VolunteerLogin} />
           </Switch>
           <Footer />

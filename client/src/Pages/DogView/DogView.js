@@ -2,11 +2,28 @@ import React, { Component } from "react";
 import Banner from "../../components/Banners/LandingBanner";
 import Button from "../../components/Button";
 import ProfilePhoto from "../../components/ProfilePhoto";
+import API from "../../utils/API";
 import { DogTaskList, DogTaskItem } from "../../components/DogTaskList";
 import DogTimeList from "../../components/DogTimeList";
 import "./DogView.css";
 
 class DogView extends Component {
+
+	constructor(props) {
+		super(props)
+		this.state = {
+			dogProfile: {}
+		};
+	}
+
+  // When component mounts, grab the dogProfile with this id
+	componentDidMount() {
+		API.getDog(this.props.match.params.id)
+			//.then(res => this.setState({ dogProfile: res.data }))
+			.then(res => this.setState({
+				dogProfile: res.data
+			})).catch(err => console.log(err));
+	}
 
 	render(){
 		return(
@@ -16,10 +33,12 @@ class DogView extends Component {
 						<Banner> 
 							<div className="row">
 								<div className="col-md-4">
-								  <ProfilePhoto className="dogInfo" />
+								  <ProfilePhoto>
+									  {this.state.dogProfile.photo}
+								  </ProfilePhoto>
 								</div>
 								<div className="col-md-8">
-									<h3>Name:</h3>
+									<h3>Name: {this.state.dogProfile.name}</h3>
 									<h5>Notes:</h5>
 								</div>
 							</div>
