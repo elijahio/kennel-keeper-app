@@ -1,14 +1,124 @@
 [
+ 
   {
-    "name": "Sweep Kennel",
+    "name": "Swept Kitchen",
     "completed": false
   },
+
   {
-    "name": "Mop Kennel",
+    "name": "Swept Office",
     "completed": false
   },
+
   {
-    "name": "Take Out Trash",
+    "name": "Swept Playroom",
+    "completed": false
+  },
+
+  {
+    "name": "Swept Laundry",
+    "completed": false
+  },
+
+  {
+    "name": "Swept Med",
+    "completed": false
+  },
+
+  {
+    "name": "Swept Kennel Area",
+    "completed": false
+  },
+
+  {
+    "name": "Swept Bath",
+    "completed": false
+  },
+
+  {
+    "name": "Mopped Kitchen",
+    "completed": false
+  },
+  
+  {
+    "name": "Mopped Office",
+    "completed": false
+  },
+  
+  {
+    "name": "Mopped Playroom",
+    "completed": false
+  },
+   
+  {
+    "name": "Mopped Laundry",
+    "completed": false
+  },
+  
+  {
+    "name": "Mopped Med",
+    "completed": false
+  },
+   
+  {
+    "name": "Mopped Kennel Area",
+    "completed": false
+  },
+
+  {
+    "name": "Mopped Bath",
+    "completed": false
+  },
+
+   
+  {
+    "name": "Load washer",
+    "completed": false
+  },
+   
+  {
+    "name": "Load Dryer",
+    "completed": false
+  },
+
+  {
+    "name": "General Cleaning",
+    "completed": false
+  },
+
+  {
+    "name": "Poop: Playard 1",
+    "completed": false
+  },
+   
+  {
+    "name": "Poop: Playard 2",
+    "completed": false
+  }, 
+  
+  {
+    "name": "Changed Couch Covers",
+    "completed": false
+  },
+   
+  {
+    "name": "Wash Food Bowls",
+    "completed": false
+  },
+   
+  {
+    "name": "Wash Water Bowls",
+    "completed": false
+  },
+   
+  {
+    "name": "Clean Toilet",
+    "completed": false
+  },
+   
+  {
+    "name": "Collect Trash",
     "completed": false
   }
+
 ]
