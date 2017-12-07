@@ -14,7 +14,7 @@ export default {
     return axios.delete("/api/genTasks/" + id);
   },
   // Saves a general task to the database
-  saveGenTasks: function(genTaskData) {
+  saveGenTask: function(genTaskData) {
     return axios.post("/api/genTasks", genTaskData);
   },
 

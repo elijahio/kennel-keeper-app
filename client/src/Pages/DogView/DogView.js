@@ -8,6 +8,23 @@ import DogTimeList from "../../components/DogTimeList";
 import "./DogView.css";
 
 class DogView extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			dogProfile: {}
+		};
+	}
+
+  // When component mounts, grab the dogProfile with this id
+	componentDidMount() {
+		API.getDog(this.props.match.params.id)
+			//.then(res => this.setState({ dogProfile: res.data }))
+			.then(res => this.setState({
+				dogProfile: res.data,
+				someData: "BLAHBLAH"
+			})).catch(err => console.log(err));
+	}
+
 
 	constructor(props) {
 		super(props)
@@ -30,7 +47,7 @@ class DogView extends Component {
 			<div className="container-fluid">
 				<div className="row">
 					<div className="col-md-12">
-						<Banner> 
+						<Banner>
 							<div className="row">
 								<div className="col-md-4">
 								  <ProfilePhoto>
@@ -47,7 +64,7 @@ class DogView extends Component {
 									<p>Check if done during your shift.</p>
 									<DogTaskList>
 										<DogTaskItem>
-										Test 
+										Test
 										</DogTaskItem>
 									</DogTaskList>
 								</div>
@@ -60,7 +77,7 @@ class DogView extends Component {
 					</div>
 				</div>
 			</div>
-	
+
 	)};
 };
 
