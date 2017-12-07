@@ -25,23 +25,6 @@ class DogView extends Component {
 			})).catch(err => console.log(err));
 	}
 
-
-	constructor(props) {
-		super(props)
-		this.state = {
-			dogProfile: {}
-		};
-	}
-
-  // When component mounts, grab the dogProfile with this id
-	componentDidMount() {
-		API.getDog(this.props.match.params.id)
-			//.then(res => this.setState({ dogProfile: res.data }))
-			.then(res => this.setState({
-				dogProfile: res.data
-			})).catch(err => console.log(err));
-	}
-
 	render(){
 		return(
 			<div className="container-fluid">
