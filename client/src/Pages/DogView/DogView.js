@@ -25,7 +25,6 @@ class DogView extends Component {
 			})).catch(err => console.log(err));
 	}
 
-
 	render(){
 		return(
 			<div className="container-fluid">
@@ -34,7 +33,9 @@ class DogView extends Component {
 						<Banner>
 							<div className="row">
 								<div className="col-md-4">
-								  <ProfilePhoto className="dogInfo" />
+								  <ProfilePhoto>
+									  {this.state.dogProfile.photo}
+								  </ProfilePhoto>
 								</div>
 								<div className="col-md-8">
 									<h3>Name: {this.state.dogProfile.name}</h3>
