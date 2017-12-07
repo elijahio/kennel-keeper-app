@@ -17,13 +17,13 @@ class AdminView extends Component {
   };
 
   componentDidMount() {
-    this.getGenTasks();
-    this.getUsers();
-    this.getDogs();
+    this.loadGenTasks();
+    this.loadUsers();
+    this.loadDogs();
   }
 
   //General Task Functions, DRY? Global function at some point. 
-  getGenTasks = () => {
+  loadGenTasks = () => {
     API.getGenTasks()
       .then(res =>
         this.setState({ tasks: res.data, name: "", completed: "",})
@@ -40,7 +40,7 @@ class AdminView extends Component {
 
 
 //USER FUNCTIONS
-  getUsers = () => {
+  loadUsers = () => {
     API.getUsers()
       .then(res =>
         this.setState({ users: res.data, name: "", photo: "", email: "", phone: "", adminStatus: "",})
@@ -49,7 +49,7 @@ class AdminView extends Component {
   };
 
   //DOG FUNCTIONS
-  getDogs = () => {
+  loadDogs = () => {
     API.getDogs()
       .then(res =>
         this.setState({ dogs: res.data, name: "", photo: "", meds: "", swept: "", mopped: "", bedding: "", cleanedOutdoor: "", sprayedOutdoor: "", walk: "", outing: "", play: "",  cuddling: "", training: "" })
@@ -64,19 +64,15 @@ class AdminView extends Component {
     });
   };
 
-  // handleFormSubmit = event => {
-  //   event.preventDefault();
-  //   if (this.state.title && this.state.author) {
-  //     API.saveBook({
-  //       title: this.state.title,
-  //       author: this.state.author,
-  //       synopsis: this.state.synopsis
-  //     })
-  //       .then(res => this.getGenTasks())
-  //       .catch(err => console.log(err));
-  //   }
-  // };
-
+  handleFormSubmit = event => {
+    // event.preventDefault();
+    
+      API.saveGenTask({
+        name: this.state.tasks,
+      })
+        .then(res => this.loadGenTasks())
+        .catch(err => console.log(err));
+    };
 
 	render(){
 		return(
@@ -101,21 +97,21 @@ class AdminView extends Component {
                             <h3>No Results to Display</h3>
                             )}
                           </div>
-	      			
+	      			    
                     <div className="row">
                       <div className="col-md-4">
                         <h3>Tasks Available</h3>
                         <h5><em>Click to enter or clear a task</em></h5>
                         <form className="form-inline">
                           <Input
-                            // value={this.state.task}
-                            // onChange={this.handleInputChange}
+                            value={this.state.tasks.name}
+                            onChange={this.handleInputChange}
                             name="task"
                             placeholder="New Task"
                           />
                           <FormBtn
-                            // disabled={!(this.state.task)}
-                            // onClick={this.handleFormSubmit}
+        
+                            onClick={this.handleFormSubmit}
                           >
                             Add
                           </FormBtn>
@@ -141,7 +137,8 @@ class AdminView extends Component {
                         {this.state.dogs.length ? (
                           <div className="dogPhotos">
                               {this.state.dogs.map(pict => (
-                            <ProfilePhoto key={pict._id}> 
+                            <ProfilePhoto key={pict._id} onClick={(e) => this.handleClick(e)}> 
+
                               {pict.photo}
                             </ProfilePhoto>
 
