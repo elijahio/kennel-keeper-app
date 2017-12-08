@@ -125,6 +125,7 @@ class AdminView extends Component {
      }
   }; 
 
+ 
   
   
 
@@ -136,7 +137,7 @@ class AdminView extends Component {
         		<div className="row">
           			<div className="col-md-12">
 	          			<Banner>
-          		      <h2>Welcome, Username!</h2>
+          		      <h2>Welcome!</h2>
                       <div className="col-md-12 volunteerPanel">
                         <h3>Registered Volunteers</h3>
                         <h5><em>Click to see details and edit.</em></h5>
@@ -246,10 +247,11 @@ class AdminView extends Component {
                           <div className="dogPhotos">
                           <AddPhoto />
                               {this.state.dogs.map(pict => (
-                            <ProfilePhoto key={pict._id}> 
-
+                            <a href={'/dogView/:id'}> <ProfilePhoto   key={pict._id}> 
                               {pict.photo}
+                             
                             </ProfilePhoto>
+                            </a>
 
                             ))}
                             </div>
