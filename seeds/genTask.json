@@ -1,123 +1,123 @@
 [
  
   {
-    "name": "Swept Kitchen",
+    "taskname": "Swept Kitchen",
     "completed": false
   },
 
   {
-    "name": "Swept Office",
+    "taskname": "Swept Office",
     "completed": false
   },
 
   {
-    "name": "Swept Playroom",
+    "taskname": "Swept Playroom",
     "completed": false
   },
 
   {
-    "name": "Swept Laundry",
+    "taskname": "Swept Laundry",
     "completed": false
   },
 
   {
-    "name": "Swept Med",
+    "taskname": "Swept Med",
     "completed": false
   },
 
   {
-    "name": "Swept Kennel Area",
+    "taskname": "Swept Kennel Area",
     "completed": false
   },
 
   {
-    "name": "Swept Bath",
+    "taskname": "Swept Bath",
     "completed": false
   },
 
   {
-    "name": "Mopped Kitchen",
+    "taskname": "Mopped Kitchen",
     "completed": false
   },
   
   {
-    "name": "Mopped Office",
+    "taskname": "Mopped Office",
     "completed": false
   },
   
   {
-    "name": "Mopped Playroom",
+    "taskname": "Mopped Playroom",
     "completed": false
   },
    
   {
-    "name": "Mopped Laundry",
+    "taskname": "Mopped Laundry",
     "completed": false
   },
   
   {
-    "name": "Mopped Med",
+    "taskname": "Mopped Med",
     "completed": false
   },
    
   {
-    "name": "Mopped Kennel Area",
+    "taskname": "Mopped Kennel Area",
     "completed": false
   },
 
   {
-    "name": "Mopped Bath",
+    "taskname": "Mopped Bath",
     "completed": false
   },
 
    
   {
-    "name": "Load washer",
+    "taskname": "Load washer",
     "completed": false
   },
    
   {
-    "name": "Load Dryer",
+    "taskname": "Load Dryer",
     "completed": false
   },
 
   {
-    "name": "General Cleaning",
+    "taskname": "General Cleaning",
     "completed": false
   },
 
   {
-    "name": "Poop: Playard 1",
+    "taskname": "Poop: Playard 1",
     "completed": false
   },
    
   {
-    "name": "Poop: Playard 2",
+    "taskname": "Poop: Playard 2",
     "completed": false
   }, 
   
   {
-    "name": "Changed Couch Covers",
+    "taskname": "Changed Couch Covers",
     "completed": false
   },
    
   {
-    "name": "Wash Food Bowls",
+    "taskname": "Wash Food Bowls",
     "completed": false
   },
    
   {
-    "name": "Wash Water Bowls",
+    "taskname": "Wash Water Bowls",
     "completed": false
   },
    
   {
-    "name": "Clean Toilet",
+    "taskname": "Clean Toilet",
     "completed": false
   },
    
   {
-    "name": "Collect Trash",
+    "taskname": "Collect Trash",
     "completed": false
   }
 

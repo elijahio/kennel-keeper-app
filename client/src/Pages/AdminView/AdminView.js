@@ -6,6 +6,9 @@ import API from "../../utils/API";
 import { GenTaskList, GenListItem } from "../../components/GenTaskList";
 import "./AdminView.css";
 import { Input, TextArea, FormBtn } from "../../components/Form";
+import DeleteBtn from "../../components/DeleteBtn";
+
+
 
 class AdminView extends Component {
 
@@ -14,6 +17,7 @@ class AdminView extends Component {
    tasks: [],
    users: [], 
    dogs: [],
+   genTaskName: ""
   };
 
   componentDidMount() {
@@ -26,14 +30,14 @@ class AdminView extends Component {
   loadGenTasks = () => {
     API.getGenTasks()
       .then(res =>
-        this.setState({ tasks: res.data, name: "", completed: "",})
+        this.setState({ tasks: res.data, genTaskName: ""})
       )
       .catch(err => console.log(err));
   };
 
   deleteGenTask = id => {
     API.deleteGenTask(id)
-      .then(res => this.getGenTasks())
+      .then(res => this.loadGenTasks())
       .catch(err => console.log(err));
   };
 
@@ -43,7 +47,7 @@ class AdminView extends Component {
   loadUsers = () => {
     API.getUsers()
       .then(res =>
-        this.setState({ users: res.data, name: "", photo: "", email: "", phone: "", adminStatus: "",})
+        this.setState({ users: res.data})
       )
       .catch(err => console.log(err));
   };
@@ -52,7 +56,7 @@ class AdminView extends Component {
   loadDogs = () => {
     API.getDogs()
       .then(res =>
-        this.setState({ dogs: res.data, name: "", photo: "", meds: "", swept: "", mopped: "", bedding: "", cleanedOutdoor: "", sprayedOutdoor: "", walk: "", outing: "", play: "",  cuddling: "", training: "" })
+        this.setState({ dogs: res.data})
       )
       .catch(err => console.log(err));
   };
@@ -64,18 +68,23 @@ class AdminView extends Component {
     });
   };
 
-  handleFormSubmit = event => {
-    // event.preventDefault();
-    
+  handleGenTaskFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.genTaskName)  {
       API.saveGenTask({
-        name: this.state.tasks,
+        taskname: this.state.genTaskName,
       })
         .then(res => this.loadGenTasks())
         .catch(err => console.log(err));
-    };
+     }
+
+  }; 
+  
+
 
 	render(){
 		return(
+
 			 <div className="container-fluid">
         		<div className="row">
           			<div className="col-md-12">
@@ -100,29 +109,37 @@ class AdminView extends Component {
 	      			    
                     <div className="row">
                       <div className="col-md-4">
+
                         <h3>Tasks Available</h3>
                         <h5><em>Click to enter or clear a task</em></h5>
+
                         <form className="form-inline">
                           <Input
-                            value={this.state.tasks.name}
+                            value={this.state.genTaskName}
                             onChange={this.handleInputChange}
-                            name="task"
+                            name="genTaskName"
                             placeholder="New Task"
                           />
-                          <FormBtn
-        
-                            onClick={this.handleFormSubmit}
+                          <FormBtn 
+                            // disabled={!(this.state.taskname)}
+                            onClick={this.handleGenTaskFormSubmit}
                           >
                             Add
                           </FormBtn>
                         </form>
+
+
+
+
+
                         {this.state.tasks.length ? (
                         <GenTaskList> 
                           {this.state.tasks.map(task => (
                           <GenListItem key={task._id}>
-                            <strong>
-                              {task.name}
+                            <strong >
+                              {task.taskname}
                             </strong>
+                            <DeleteBtn onClick={() => this.deleteGenTask(task._id)} />
                           </GenListItem>
                           ))}
                         </GenTaskList>
@@ -131,13 +148,17 @@ class AdminView extends Component {
                         )}
                       </div>
 
+
+
                       <div className="col-md-8">
                         <h3>Animal Profiles</h3>
                         <h5><em>Click to see details and edit.</em></h5>
+
+
                         {this.state.dogs.length ? (
                           <div className="dogPhotos">
                               {this.state.dogs.map(pict => (
-                            <ProfilePhoto key={pict._id} onClick={(e) => this.handleClick(e)}> 
+                            <ProfilePhoto key={pict._id}> 
 
                               {pict.photo}
                             </ProfilePhoto>
