@@ -31,7 +31,7 @@ export default {
     return axios.delete("/api/userProfile/" + id);
   },
   // Saves a user to the database
-  saveUsers: function(userData) {
+  saveUser: function(userData) {
     return axios.post("/api/userProfile", userData);
   },
 
@@ -48,7 +48,7 @@ export default {
     return axios.delete("/api/dogProfiles/" + id);
   },
   // Saves a dog to the database
-  saveDogs: function(userData) {
+  saveDog: function(userData) {
     return axios.post("/api/dogProfiles", userData);
   }
 
