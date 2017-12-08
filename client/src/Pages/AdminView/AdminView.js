@@ -7,6 +7,8 @@ import { GenTaskList, GenListItem } from "../../components/GenTaskList";
 import "./AdminView.css";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import DeleteBtn from "../../components/DeleteBtn";
+import AddPhoto from "../../components/AddPhoto";
+
 
 
 
@@ -17,7 +19,13 @@ class AdminView extends Component {
    tasks: [],
    users: [], 
    dogs: [],
-   genTaskName: ""
+   genTaskName: "",
+   userName: "",
+   userPhoto: "",
+   userEmail: "",
+   userPhone: "",
+   dogName: "",
+   dogPhoto: ""
   };
 
   componentDidMount() {
@@ -26,7 +34,20 @@ class AdminView extends Component {
     this.loadDogs();
   }
 
-  //General Task Functions, DRY? Global function at some point. 
+
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+
+
+
+
+  //GENERAL TASK FUNCTIONS
   loadGenTasks = () => {
     API.getGenTasks()
       .then(res =>
@@ -41,33 +62,6 @@ class AdminView extends Component {
       .catch(err => console.log(err));
   };
 
-
-
-//USER FUNCTIONS
-  loadUsers = () => {
-    API.getUsers()
-      .then(res =>
-        this.setState({ users: res.data})
-      )
-      .catch(err => console.log(err));
-  };
-
-  //DOG FUNCTIONS
-  loadDogs = () => {
-    API.getDogs()
-      .then(res =>
-        this.setState({ dogs: res.data})
-      )
-      .catch(err => console.log(err));
-  };
-
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
-
   handleGenTaskFormSubmit = event => {
     event.preventDefault();
     if (this.state.genTaskName)  {
@@ -79,6 +73,60 @@ class AdminView extends Component {
      }
 
   }; 
+
+
+
+
+//USER FUNCTIONS
+  loadUsers = () => {
+    API.getUsers()
+      .then(res =>
+        this.setState({ users: res.data, userName: "", userPhoto: "", userEmail: "", userPhone: ""})
+      )
+      .catch(err => console.log(err));
+  };
+
+   handleUserFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.userName)  {
+      API.saveUser({
+        name: this.state.userName,
+        photo: this.state.userPhoto,
+        email: this.state.userPhoto,
+        phone: this.state.userPhone
+      })
+        .then(res => this.loadUsers())
+        .catch(err => console.log(err));
+     }
+  }; 
+
+
+
+
+  //DOG FUNCTIONS
+  loadDogs = () => {
+    API.getDogs()
+      .then(res =>
+        this.setState({ dogs: res.data, dogName: "", dogPhoto: ""})
+      )
+      .catch(err => console.log(err));
+  };
+
+  handleDogFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.dogName)  {
+      API.saveDog({
+        name: this.state.dogName,
+        photo: this.state.dogPhoto
+
+      })
+        .then(res => this.loadDogs())
+        .catch(err => console.log(err));
+     }
+  }; 
+
+ 
+  
   
 
 
@@ -89,15 +137,17 @@ class AdminView extends Component {
         		<div className="row">
           			<div className="col-md-12">
 	          			<Banner>
-          		      <h2>Welcome, Username!</h2>
+          		      <h2>Welcome!</h2>
                       <div className="col-md-12 volunteerPanel">
                         <h3>Registered Volunteers</h3>
                         <h5><em>Click to see details and edit.</em></h5>
                           {this.state.users.length ? (
                           <div className="userPhotos">
+                            <AddPhoto />
                               {this.state.users.map(pic => (
-                            <ProfilePhoto key={pic._id}> 
+                            <ProfilePhoto key={pic._id} > 
                               {pic.photo}
+
                             </ProfilePhoto>
 
                             ))}
@@ -105,7 +155,45 @@ class AdminView extends Component {
                             ) : (
                             <h3>No Results to Display</h3>
                             )}
+
                           </div>
+
+                    <div className="row">
+                      <div className="col-md-3">
+                      </div>
+                      <div className="col-md-6">
+                        <form className="add-user">
+                          <Input
+                            value={this.state.userName}
+                            onChange={this.handleInputChange}
+                            name="userName"
+                            placeholder="Name"
+                          />
+                          <Input
+                            value={this.state.userPhoto}
+                            onChange={this.handleInputChange}
+                            name="userPhoto"
+                            placeholder="Photo Link"
+                          />
+                          <Input
+                            value={this.state.userEmail}
+                            onChange={this.handleInputChange}
+                            name="userEmail"
+                            placeholder="Email"
+                          />
+                          <Input
+                            value={this.state.userPhone}
+                            onChange={this.handleInputChange}
+                            name="userPhone"
+                            placeholder="Phone Number"
+                          />
+                          <FormBtn
+                            onClick={this.handleUserFormSubmit}
+                            > Add User
+                            </FormBtn>
+                        </form>
+                      </div>
+                    </div>
 	      			    
                     <div className="row">
                       <div className="col-md-4">
@@ -157,11 +245,13 @@ class AdminView extends Component {
 
                         {this.state.dogs.length ? (
                           <div className="dogPhotos">
+                          <AddPhoto />
                               {this.state.dogs.map(pict => (
-                            <ProfilePhoto key={pict._id}> 
-
+                            <a href={'/dogView/:id'}> <ProfilePhoto   key={pict._id}> 
                               {pict.photo}
+                             
                             </ProfilePhoto>
+                            </a>
 
                             ))}
                             </div>
@@ -169,7 +259,33 @@ class AdminView extends Component {
                             <h3>No Results to Display</h3>
                             )}
                           </div>
+                          <div className="row">
+                            <div className="col-md-4">
+                              <form className="add-dog">
+                                <Input
+                                  value={this.state.dogName}
+                                  onChange={this.handleInputChange}
+                                  name="dogName"
+                                  placeholder="Doggo Name"
+                                />
+                                <Input
+                                  value={this.state.dogPhoto}
+                                  onChange={this.handleInputChange}
+                                  name="dogPhoto"
+                                  placeholder="Photo Link"
+                                />
+                               
+                                <FormBtn
+                                  onClick={this.handleDogFormSubmit}
+                                  > Add Doggo
+                                  </FormBtn>
+                            </form>
                       </div>
+                    </div>
+                      </div>
+
+
+                       
                    
                     
                   </Banner>
