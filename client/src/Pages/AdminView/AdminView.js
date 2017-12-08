@@ -137,7 +137,7 @@ class AdminView extends Component {
         		<div className="row">
           			<div className="col-md-12">
 	          			<Banner>
-          		      <h2>Welcome!</h2>
+          		      <h1 id="welcome-username">Welcome, Meg!</h1>
                       <div className="col-md-12 volunteerPanel">
                         <h3>Registered Volunteers</h3>
                         <h5><em>Click to see details and edit.</em></h5>
