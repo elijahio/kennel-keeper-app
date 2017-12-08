@@ -2,7 +2,7 @@ import React from "react";
 import "./Button.css";
 
 const Button = props => (
-  <span className="btn" type="button" {...props}>
+  <span className="btn hvr-bounce-to-top" type="button" {...props}>
     
   </span>
 );
