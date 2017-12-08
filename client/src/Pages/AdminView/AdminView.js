@@ -16,7 +16,7 @@ class AdminView extends Component {
    tasks: [],
    users: [], 
    dogs: [],
-   taskname: ""
+   genTaskName: ""
   };
 
   componentDidMount() {
@@ -29,7 +29,7 @@ class AdminView extends Component {
   loadGenTasks = () => {
     API.getGenTasks()
       .then(res =>
-        this.setState({ tasks: res.data, taskname: "", completed: ""})
+        this.setState({ tasks: res.data, genTaskName: ""})
       )
       .catch(err => console.log(err));
   };
@@ -46,7 +46,7 @@ class AdminView extends Component {
   loadUsers = () => {
     API.getUsers()
       .then(res =>
-        this.setState({ users: res.data, name: "", photo: "", email: "", phone: "", adminStatus: "",})
+        this.setState({ users: res.data})
       )
       .catch(err => console.log(err));
   };
@@ -55,7 +55,7 @@ class AdminView extends Component {
   loadDogs = () => {
     API.getDogs()
       .then(res =>
-        this.setState({ dogs: res.data, name: "", photo: "", meds: "", swept: "", mopped: "", bedding: "", cleanedOutdoor: "", sprayedOutdoor: "", walk: "", outing: "", play: "",  cuddling: "", training: "" })
+        this.setState({ dogs: res.data})
       )
       .catch(err => console.log(err));
   };
@@ -67,18 +67,15 @@ class AdminView extends Component {
     });
   };
 
-  handleFormSubmit = event => {
+  handleGenTaskFormSubmit = event => {
     event.preventDefault();
-    console.log(event)
-    // console.log(this.state.tasks.taskname)
-    // if (this.state.tasks.task name)  {
+    if (this.state.genTaskName)  {
       API.saveGenTask({
-        taskname: this.state.tasks.taskname,
-       
+        taskname: this.state.genTaskName,
       })
         .then(res => this.loadGenTasks())
         .catch(err => console.log(err));
-     // }
+     }
 
   }; 
   
@@ -117,14 +114,14 @@ class AdminView extends Component {
 
                         <form className="form-inline">
                           <Input
-                            value={this.state.tasks.taskname}
+                            value={this.state.genTaskName}
                             onChange={this.handleInputChange}
-                            name="task"
+                            name="genTaskName"
                             placeholder="New Task"
                           />
                           <FormBtn 
-                            // disabled={!this.state.tasks.taskname}
-                            onClick={this.handleFormSubmit}
+                            // disabled={!(this.state.taskname)}
+                            onClick={this.handleGenTaskFormSubmit}
                           >
                             Add
                           </FormBtn>
