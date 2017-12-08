@@ -7,6 +7,8 @@ import { GenTaskList, GenListItem } from "../../components/GenTaskList";
 import "./AdminView.css";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 
+
+
 class AdminView extends Component {
 
  
@@ -14,6 +16,7 @@ class AdminView extends Component {
    tasks: [],
    users: [], 
    dogs: [],
+   taskname: ""
   };
 
   componentDidMount() {
@@ -26,7 +29,7 @@ class AdminView extends Component {
   loadGenTasks = () => {
     API.getGenTasks()
       .then(res =>
-        this.setState({ tasks: res.data, name: "", completed: "",})
+        this.setState({ tasks: res.data, taskname: "", completed: ""})
       )
       .catch(err => console.log(err));
   };
@@ -65,17 +68,25 @@ class AdminView extends Component {
   };
 
   handleFormSubmit = event => {
-    // event.preventDefault();
-    
+    event.preventDefault();
+    console.log(event)
+    // console.log(this.state.tasks.taskname)
+    // if (this.state.tasks.task name)  {
       API.saveGenTask({
-        name: this.state.tasks,
+        taskname: this.state.tasks.taskname,
+       
       })
         .then(res => this.loadGenTasks())
         .catch(err => console.log(err));
-    };
+     // }
+
+  }; 
+  
+
 
 	render(){
 		return(
+
 			 <div className="container-fluid">
         		<div className="row">
           			<div className="col-md-12">
@@ -100,28 +111,35 @@ class AdminView extends Component {
 	      			    
                     <div className="row">
                       <div className="col-md-4">
+
                         <h3>Tasks Available</h3>
                         <h5><em>Click to enter or clear a task</em></h5>
+
                         <form className="form-inline">
                           <Input
-                            value={this.state.tasks.name}
+                            value={this.state.tasks.taskname}
                             onChange={this.handleInputChange}
                             name="task"
                             placeholder="New Task"
                           />
-                          <FormBtn
-        
+                          <FormBtn 
+                            // disabled={!this.state.tasks.taskname}
                             onClick={this.handleFormSubmit}
                           >
                             Add
                           </FormBtn>
                         </form>
+
+
+
+
+
                         {this.state.tasks.length ? (
                         <GenTaskList> 
                           {this.state.tasks.map(task => (
                           <GenListItem key={task._id}>
-                            <strong>
-                              {task.name}
+                            <strong >
+                              {task.taskname}
                             </strong>
                           </GenListItem>
                           ))}
@@ -131,13 +149,17 @@ class AdminView extends Component {
                         )}
                       </div>
 
+
+
                       <div className="col-md-8">
                         <h3>Animal Profiles</h3>
                         <h5><em>Click to see details and edit.</em></h5>
+
+
                         {this.state.dogs.length ? (
                           <div className="dogPhotos">
                               {this.state.dogs.map(pict => (
-                            <ProfilePhoto key={pict._id} onClick={(e) => this.handleClick(e)}> 
+                            <ProfilePhoto key={pict._id}> 
 
                               {pict.photo}
                             </ProfilePhoto>
