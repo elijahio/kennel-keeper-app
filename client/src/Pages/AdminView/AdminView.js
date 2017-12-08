@@ -6,6 +6,7 @@ import API from "../../utils/API";
 import { GenTaskList, GenListItem } from "../../components/GenTaskList";
 import "./AdminView.css";
 import { Input, TextArea, FormBtn } from "../../components/Form";
+import DeleteBtn from "../../components/DeleteBtn";
 
 
 
@@ -36,7 +37,7 @@ class AdminView extends Component {
 
   deleteGenTask = id => {
     API.deleteGenTask(id)
-      .then(res => this.getGenTasks())
+      .then(res => this.loadGenTasks())
       .catch(err => console.log(err));
   };
 
@@ -138,6 +139,7 @@ class AdminView extends Component {
                             <strong >
                               {task.taskname}
                             </strong>
+                            <DeleteBtn onClick={() => this.deleteGenTask(task._id)} />
                           </GenListItem>
                           ))}
                         </GenTaskList>
