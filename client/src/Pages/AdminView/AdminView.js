@@ -157,13 +157,15 @@ class AdminView extends Component {
 
                         </ProfilePhoto>
 
+                        
+
                         ))}
                         </div>
                         ) : (
                         <h3>No Results to Display</h3>
                         )}
 
-                       <DeleteBtn onClick={() => this.deleteUser()}>Delete </DeleteBtn>
+                      
                   </div>
               
               <div className="col-md-4 aligner-item">
