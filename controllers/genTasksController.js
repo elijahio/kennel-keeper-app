@@ -26,6 +26,12 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  partialUpdate: function(req, res) {
+    db.genTask
+      .findOneAndUpdate({ _id: req.params.id }, {$set: req.body})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   remove: function(req, res) {
     db.genTask
       .findById({ _id: req.params.id })

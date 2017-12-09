@@ -17,6 +17,9 @@ export default {
   saveGenTask: function(genTaskData) {
     return axios.post("/api/genTasks", genTaskData);
   },
+  updateGenTask: function(id, genTaskData) {
+    return axios.put("/api/genTasks/" + id, genTaskData);
+  },
 
    // Gets all users
   getUsers: function() {
