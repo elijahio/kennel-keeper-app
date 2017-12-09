@@ -161,7 +161,7 @@ class AdminView extends Component {
                 <div className="row aligner">
                   <div className="col-md-6 aligner-item">
                     <h3 id="registered-volunteers-title">Registered Volunteers</h3>
-                    <p><em>Click to see details and edit.</em></p>
+                    <p className="details-text"><em>Click to see details and edit.</em></p>
                       {this.state.users.length ? (
                       <div className="userPhotos">
 
@@ -228,7 +228,7 @@ class AdminView extends Component {
               <div className="col-md-4"></div>
               <div className="col-md-4">
                 <h3>Tasks Available</h3>
-                <p><em>Click to enter or clear a task</em></p>
+                <p className="details-text"><em>Click to enter or clear a task</em></p>
 
                 <form className="form-inline">
                   <Input
@@ -275,7 +275,7 @@ class AdminView extends Component {
             <div className="row aligner">
               <div className="col-md-8 aligner-item">
                 <h3>Animal Profiles</h3>
-                <h5><em>Click to see details and edit.</em></h5>
+                <p className="details-text"><em>Click to see details and edit.</em></p>
 
 
                 {this.state.dogs.length ? (
