@@ -13,7 +13,7 @@ class Landing extends Component {
           			<div className="col-md-12">
 	          			<LandingBanner>
 	          			  <div className="center-child">
-		          			  <h1>It's KenneKeep.in time!</h1>
+		          			  <h1>It's KennelKeep.in time!</h1>
 	      						<p>Kennel Keeper is a volunteer task manager for shelters.
 	      						It allows admin to view which volunteer is on shift, what
 	      						general or animal specific tasks they've completed, and
