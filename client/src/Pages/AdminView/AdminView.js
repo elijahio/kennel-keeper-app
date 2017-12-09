@@ -130,12 +130,12 @@ class AdminView extends Component {
   
 
 
-	render(){
-		return(
+  render(){
+    return(
 
-			 <div className="container-fluid">
-    			<Banner>
-    	      <h1 id="welcome-username">Welcome, Meg!</h1>
+       <div className="container-fluid">
+          <Banner>
+            <h1 id="welcome-username">Welcome, Meg!</h1>
               <div className="volunteerPanel">
                 <div className="row aligner">
                   <div className="col-md-6 aligner-item">
@@ -195,7 +195,7 @@ class AdminView extends Component {
                   </div>
             </div>
             <hr className="row-separator"></hr>
-    	    
+          
             <div className="row">
               <div className="col-md-4">
 
@@ -292,7 +292,7 @@ class AdminView extends Component {
           </Banner>
 
         </div>
-			);
-	}
+      );
+  }
 }
 export default AdminView;

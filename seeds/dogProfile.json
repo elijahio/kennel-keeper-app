@@ -8,11 +8,11 @@
     "bedding": false,
     "cleanedOutdoor": false,
     "sprayedOutdoor": false,
-    "walk": false,
-    "outing": false,
-    "play": false,
-    "cuddling": false,
-    "training": false
+    "walk": 0,
+    "outing": 0,
+    "play": 0,
+    "cuddling": 0,
+    "training": 0
   },
   {
     "name": "Muffin",
@@ -23,11 +23,11 @@
     "bedding": false,
     "cleanedOutdoor": false,
     "sprayedOutdoor": false,
-    "walk": false,
-    "outing": false,
-    "play": false,
-    "cuddling": false,
-    "training": false
+    "walk": 0,
+    "outing": 0,
+    "play": 0,
+    "cuddling": 0,
+    "training": 0
   },
   {
     "name": "Wishbone",
@@ -38,10 +38,10 @@
     "bedding": false,
     "cleanedOutdoor": false,
     "sprayedOutdoor": false,
-    "walk": false,
-    "outing": false,
-    "play": false,
-    "cuddling": false,
-    "training": false 
+    "walk": 0,
+    "outing": 0,
+    "play": 0,
+    "cuddling": 0,
+    "training": 0
   }
 ]

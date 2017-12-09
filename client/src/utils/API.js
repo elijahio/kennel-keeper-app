@@ -48,10 +48,12 @@ export default {
     return axios.delete("/api/dogProfiles/" + id);
   },
   // Saves a dog to the database
-  saveDog: function(userData) {
-    return axios.post("/api/dogProfiles", userData);
+  saveDog: function(dogData) {
+    return axios.post("/api/dogProfiles", dogData);
+  },
+  // Saves a dog to the database
+  updateDog: function(id, dogData) {
+    return axios.put("/api/dogProfiles/" + id, dogData);
   }
-
-
 
 };
