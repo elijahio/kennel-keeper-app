@@ -37,3 +37,11 @@ input[type=submit]:hover {
 	color: #162835;
 	border: 1px solid white;
 }
+
+.btn {
+	width: 300px;
+}
+
+.login-button-padding {
+	margin-top: 20px;
+}
