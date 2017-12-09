@@ -10,11 +10,11 @@ const dogProfileSchema = new Schema({
   bedding: { type: Boolean, default: false },
   cleanedOutdoor: { type: Boolean, default: false },
   sprayedOutdoor: { type: Boolean, default: false },
-  walk: { type: int, default: 0 },
-  outing: { type: int, default: 0 },
-  play: { type: int, default: 0 },
-  cuddling: { type: int, default: 0 },
-  training: { type: int, default: 0 }
+  walk: { type: Number, default: 0 },
+  outing: { type: Number, default: 0 },
+  play: { type: Number, default: 0 },
+  cuddling: { type: Number, default: 0 },
+  training: { type: Number, default: 0 }
 },
 { collection : 'dogProfile' });
 
