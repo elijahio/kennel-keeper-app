@@ -7,6 +7,7 @@ import { GenTaskList, GenListItem } from "../../components/GenTaskList";
 import "./AdminView.css";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import DeleteBtn from "../../components/DeleteBtn";
+import CompleteBtn from "../../components/CompleteBtn"
 import AddPhoto from "../../components/AddPhoto";
 
 
@@ -47,7 +48,10 @@ class AdminView extends Component {
 
 
 
+
   //GENERAL TASK FUNCTIONS
+
+  //load
   loadGenTasks = () => {
     API.getGenTasks()
       .then(res =>
@@ -56,12 +60,14 @@ class AdminView extends Component {
       .catch(err => console.log(err));
   };
 
+  // delete
   deleteGenTask = id => {
     API.deleteGenTask(id)
       .then(res => this.loadGenTasks())
       .catch(err => console.log(err));
   };
 
+  //submit
   handleGenTaskFormSubmit = event => {
     event.preventDefault();
     if (this.state.genTaskName)  {
@@ -73,6 +79,7 @@ class AdminView extends Component {
      }
 
   }; 
+
 
 
 
@@ -138,6 +145,7 @@ class AdminView extends Component {
           			<div className="col-md-12">
 	          			<Banner>
           		      <h2>Welcome!</h2>
+                    <div className="row">
                       <div className="col-md-12 volunteerPanel">
                         <h3>Registered Volunteers</h3>
                         <h5><em>Click to see details and edit.</em></h5>
@@ -157,6 +165,7 @@ class AdminView extends Component {
                             )}
 
                           </div>
+                        </div>
 
                     <div className="row">
                       <div className="col-md-3">
@@ -223,12 +232,15 @@ class AdminView extends Component {
                         {this.state.tasks.length ? (
                         <GenTaskList> 
                           {this.state.tasks.map(task => (
+                          
                           <GenListItem key={task._id}>
-                            <strong >
-                              {task.taskname}
-                            </strong>
+                             <CompleteBtn onClick={() => this.updateGenTask(task._id)} />
+                              <strong >
+                                {task.taskname}
+                              </strong>
                             <DeleteBtn onClick={() => this.deleteGenTask(task._id)} />
                           </GenListItem>
+                          
                           ))}
                         </GenTaskList>
                         ) : (
@@ -245,12 +257,13 @@ class AdminView extends Component {
 
                         {this.state.dogs.length ? (
                           <div className="dogPhotos">
-                          <AddPhoto />
+                            <AddPhoto />
                               {this.state.dogs.map(pict => (
-                            <a href={'/dogView/:id'}> <ProfilePhoto   key={pict._id}> 
+                            <a href={"/dogView/" + pict._id}> 
+                              <ProfilePhoto   key={pict._id}> 
                               {pict.photo}
                              
-                            </ProfilePhoto>
+                              </ProfilePhoto>
                             </a>
 
                             ))}

@@ -10,7 +10,7 @@ router.route("/")
 // Route for "/api/dogProfiles/:id" -- individual dog
 router.route("/:id")
   .get(dogProfilesController.findById)
-  .put(dogProfilesController.update)
+  .put(dogProfilesController.partialUpdate)
   .delete(dogProfilesController.remove);
 
 module.exports = router;
