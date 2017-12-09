@@ -19,20 +19,20 @@ const strikethroughStyle = (done) => {
 
 class DogView extends Component {
 	state = {
-    "name": "",
-    "photo": "",
-    "meds": false,
-    "swept": false,
-    "mopped": false,
-    "bedding": false,
-    "cleanedOutdoor": false,
-    "sprayedOutdoor": false,
-    "walk": 0,
-    "outing": 0,
-    "play": 0,
-    "cuddling": 0,
-    "training": 0
-  }
+    name: "",
+    photo: "",
+    meds: false,
+    swept: false,
+    mopped: false,
+    bedding: false,
+    cleanedOutdoor: false,
+    sprayedOutdoor: false,
+    walk: 0,
+    outing: 0,
+    play: 0,
+    cuddling: 0,
+    training: 0
+  };
 
 
 

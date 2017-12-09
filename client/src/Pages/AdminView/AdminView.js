@@ -250,7 +250,7 @@ class AdminView extends Component {
                   <div className="dogPhotos">
                   <AddPhoto />
                       {this.state.dogs.map(pict => (
-                    <a href={'/dogView/:id'}> <ProfilePhoto   key={pict._id}> 
+                    <a href={'/dogView/' + pict._id}> <ProfilePhoto   key={pict._id}> 
                       {pict.photo}
                      
                     </ProfilePhoto>
