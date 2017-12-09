@@ -68,3 +68,8 @@ body {
 .footer-text {
   font-size: 14px !important;
 }
+
+/* Removes annoying blue hover state (hurts accessibility though :( ). */
+.form-field:focus, button:focus, input:focus, select:focus, textarea:focus {
+  outline: none !important;
+}
