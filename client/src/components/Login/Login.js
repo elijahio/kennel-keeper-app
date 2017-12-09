@@ -1,5 +1,6 @@
 import React from "react";
 import "./Login.css";
+import Button from "../Button";
 
 const Login = () =>
 
@@ -12,8 +13,8 @@ const Login = () =>
 	    <label for="password"></label>
 	    <input type="text" id="password" placeholder="Password"></input>
     </div>
-    <div>
-    	<input type="submit" value="Submit" id="submit"></input>
+    <div className="login-button-padding">
+        <a href="/adminview"><Button>Login</Button></a>
     </div>
 </form>
 
