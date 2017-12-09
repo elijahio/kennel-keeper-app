@@ -100,6 +100,11 @@ class AdminView extends Component {
      }
   }; 
 
+  deleteUser = id => {
+    API.deleteUser(id)
+      .then(res => this.loadUsers())
+      .catch(err => console.log(err));
+  };
 
 
 
@@ -143,9 +148,11 @@ class AdminView extends Component {
                     <h5><em>Click to see details and edit.</em></h5>
                       {this.state.users.length ? (
                       <div className="userPhotos">
-                        <AddPhoto />
+
                           {this.state.users.map(pic => (
+                         
                         <ProfilePhoto key={pic._id}> 
+
                           {pic.photo}
 
                         </ProfilePhoto>
@@ -155,6 +162,8 @@ class AdminView extends Component {
                         ) : (
                         <h3>No Results to Display</h3>
                         )}
+
+                       <DeleteBtn onClick={() => this.deleteUser()}>Delete </DeleteBtn>
                   </div>
               
               <div className="col-md-4 aligner-item">
@@ -248,9 +257,9 @@ class AdminView extends Component {
 
                 {this.state.dogs.length ? (
                   <div className="dogPhotos">
-                  <AddPhoto />
                       {this.state.dogs.map(pict => (
-                    <a href={'/dogView/' + pict._id}> <ProfilePhoto   key={pict._id}> 
+                    <a href={'/dogView/' + pict._id}> 
+                    <ProfilePhoto   key={pict._id}> 
                       {pict.photo}
                      
                     </ProfilePhoto>
