@@ -299,6 +299,7 @@ class AdminView extends Component {
                 </form>
               </div>
           </div>
+          <hr className="bottom-page-separator"></hr>
         </div>
     <Footer></Footer>           
     </Banner>

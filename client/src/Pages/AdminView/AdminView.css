@@ -49,6 +49,14 @@
 	margin-right: 25%;
 }
 
+.bottom-page-separator {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	margin-left: 25%;
+	margin-right: 25%;
+	border-color: transparent;
+}
+
 body {
 	background-color: black;
 }
