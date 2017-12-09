@@ -14,7 +14,7 @@
 .btn:hover {
 	/*background-color: #fff;*/
 	color: white;
-	border: 1px solid #162835;
+	border: 1px solid #6694ac;
   background-color: transparent;
 }
 
@@ -38,7 +38,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #162835;
+  background: #6694ac;
   -webkit-transform: scaleY(0);
   transform: scaleY(0);
   -webkit-transform-origin: 50% 100%;
