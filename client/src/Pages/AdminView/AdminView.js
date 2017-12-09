@@ -10,6 +10,14 @@ import DeleteBtn from "../../components/DeleteBtn";
 import AddPhoto from "../../components/AddPhoto";
 import Footer from "../../components/Footer";
 
+const strikethroughStyle = (done) => {
+  if(done) {
+    return { textDecoration: "line-through" }
+  }
+  else {
+    return { textDecoration: "none" }
+  }
+}
 
 class AdminView extends Component {
 
@@ -19,6 +27,7 @@ class AdminView extends Component {
    users: [], 
    dogs: [],
    genTaskName: "",
+   genTaskCompleted: "",
    userName: "",
    userPhoto: "",
    userEmail: "",
@@ -72,6 +81,13 @@ class AdminView extends Component {
      }
 
   }; 
+
+   toggleGenTask = (id, val) => {
+    console.dir(id);
+    API.updateGenTask(id, {completed: val})
+    .then(res => this.loadGenTasks())
+    .catch(err => console.log( err));
+  };
 
 
 
@@ -128,6 +144,7 @@ class AdminView extends Component {
         .catch(err => console.log(err));
      }
   }; 
+
 
  
   
@@ -238,8 +255,8 @@ class AdminView extends Component {
                 {this.state.tasks.length ? (
                 <GenTaskList> 
                   {this.state.tasks.map(task => (
-                  <GenListItem key={task._id}>
-                    <strong >
+                  <GenListItem key={task._id} onClick={() => this.toggleGenTask(task._id, !task.completed)}>
+                    <strong style={strikethroughStyle(task.completed)}>
                       {task.taskname}
                     </strong>
                     <DeleteBtn onClick={() => this.deleteGenTask(task._id)} />
@@ -253,7 +270,7 @@ class AdminView extends Component {
               <div className="col-md-4"></div>
             </div>              
 
-            <hr className="row-separator"></hr>
+            <hr className="row-separator"></hr> 
 
             <div className="row aligner">
               <div className="col-md-8 aligner-item">
@@ -264,9 +281,8 @@ class AdminView extends Component {
                 {this.state.dogs.length ? (
 
                 <div className="dogPhotos">
-                <AddPhoto />
                   {this.state.dogs.map(pict => (
-                  <a href={'/dogView/:id'}> <ProfilePhoto key={pict._id}> {pict.photo}</ProfilePhoto></a>
+                  <a href={'/dogView/' + pict._id}> <ProfilePhoto key={pict._id}>{pict.photo}</ProfilePhoto></a>
                   ))}
                 </div>
                   ) : (
