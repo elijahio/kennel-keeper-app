@@ -8,8 +8,7 @@ import "./AdminView.css";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 import DeleteBtn from "../../components/DeleteBtn";
 import AddPhoto from "../../components/AddPhoto";
-
-
+import Footer from "../../components/Footer";
 
 
 class AdminView extends Component {
@@ -145,7 +144,7 @@ class AdminView extends Component {
                 <div className="row aligner">
                   <div className="col-md-6 aligner-item">
                     <h3 id="registered-volunteers-title">Registered Volunteers</h3>
-                    <h5><em>Click to see details and edit.</em></h5>
+                    <p><em>Click to see details and edit.</em></p>
                       {this.state.users.length ? (
                       <div className="userPhotos">
 
@@ -171,21 +170,21 @@ class AdminView extends Component {
               <div className="col-md-4 aligner-item">
                     <form className="add-user">
                       <Input
-                      className="form-field"
+                        className="form-field"
                         value={this.state.userName}
                         onChange={this.handleInputChange}
                         name="userName"
                         placeholder="Name"
                       />
                       <Input
-                      className="form-field"
+                        className="form-field"
                         value={this.state.userPhoto}
                         onChange={this.handleInputChange}
                         name="userPhoto"
                         placeholder="Photo Link"
                       />
                       <Input
-                      className="form-field"
+                        className="form-field"
                         value={this.state.userEmail}
                         onChange={this.handleInputChange}
                         name="userEmail"
@@ -205,17 +204,17 @@ class AdminView extends Component {
                     </form>
                   </div>
             </div>
-            <hr className="row-separator"></hr>
-          
-            <div className="row">
-              <div className="col-md-4">
 
+            <hr className="row-separator"></hr>
+
+            <div className="row">
+              <div className="col-md-4"></div>
+              <div className="col-md-4">
                 <h3>Tasks Available</h3>
-                <h5><em>Click to enter or clear a task</em></h5>
+                <p><em>Click to enter or clear a task</em></p>
 
                 <form className="form-inline">
                   <Input
-                  className="form-field"
                     className="form-field"
                     value={this.state.genTaskName}
                     onChange={this.handleInputChange}
@@ -229,11 +228,13 @@ class AdminView extends Component {
                     Add
                   </FormBtn>
                 </form>
+              </div>
+              <div className="col-md-4"></div>
+            </div>
 
-
-
-
-
+            <div className="row">
+              <div className="col-md-4"></div>
+              <div className="col-md-4">
                 {this.state.tasks.length ? (
                 <GenTaskList> 
                   {this.state.tasks.map(task => (
@@ -249,61 +250,62 @@ class AdminView extends Component {
                   <h3>No Results to Display</h3>
                 )}
               </div>
+              <div className="col-md-4"></div>
+            </div>              
 
+            <hr className="row-separator"></hr>
 
-
-              <div className="col-md-8">
+            <div className="row aligner">
+              <div className="col-md-8 aligner-item">
                 <h3>Animal Profiles</h3>
                 <h5><em>Click to see details and edit.</em></h5>
 
 
                 {this.state.dogs.length ? (
-                  <div className="dogPhotos">
-                      {this.state.dogs.map(pict => (
-                    <a href={'/dogView/' + pict._id}> 
-                    <ProfilePhoto   key={pict._id}> 
-                      {pict.photo}
-                     
-                    </ProfilePhoto>
-                    </a>
 
-                    ))}
-                    </div>
-                    ) : (
-                    <h3>No Results to Display</h3>
-                    )}
-                  </div>
-                  <div className="row">
-                    <div className="col-md-4">
-                      <form className="add-dog">
-                        <Input
-                          className="form-field"
-                          value={this.state.dogName}
-                          onChange={this.handleInputChange}
-                          name="dogName"
-                          placeholder="Doggo Name"
-                        />
-                        <Input
-                          className="form-field"
-                          value={this.state.dogPhoto}
-                          onChange={this.handleInputChange}
-                          name="dogPhoto"
-                          placeholder="Photo Link"
-                        />
-                       
-                        <FormBtn
-                          onClick={this.handleDogFormSubmit}
-                          > Add Doggo
-                          </FormBtn>
-                    </form>
-              </div>
-            </div>
-              </div>
-              </div>            
-          </Banner>
+                <div className="dogPhotos">
+                <AddPhoto />
+                  {this.state.dogs.map(pict => (
+                  <a href={'/dogView/:id'}> <ProfilePhoto key={pict._id}> {pict.photo}</ProfilePhoto></a>
+                  ))}
+                </div>
+                  ) : (
+                  <h3>No Results to Display</h3>
+                  )}
 
+              </div>
+
+              <div className="col-md-4 aligner-item">
+                <form className="add-dog">
+                  <Input
+                    className="form-field"
+                    value={this.state.dogName}
+                    onChange={this.handleInputChange}
+                    name="dogName"
+                    placeholder="Doggo Name"
+                  />
+                  <Input
+                    className="form-field"
+                    value={this.state.dogPhoto}
+                    onChange={this.handleInputChange}
+                    name="dogPhoto"
+                    placeholder="Photo Link"
+                  />
+
+                  <FormBtn
+                    onClick={this.handleDogFormSubmit}
+                  > Add Doggo
+                  </FormBtn>
+                </form>
+              </div>
+          </div>
         </div>
-      );
-  }
+    <Footer></Footer>           
+    </Banner>
+
+  </div>
+);
 }
+}
+
 export default AdminView;
