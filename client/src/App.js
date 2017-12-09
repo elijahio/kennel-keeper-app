@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
 import Nav from "./components/Nav";
-import Footer from "./components/Footer";
 import Landing from "./Pages/Landing";
 import AdminLogin from "./Pages/AdminLogin";
 import AdminView from "./Pages/AdminView";
@@ -26,7 +25,6 @@ class App extends Component {
             <Route exact path="/dogView/" component={DogView} />
             <Route exact path="/volunteer" component={VolunteerLogin} />
           </Switch>
-          <Footer />
         </div>
       </Router>
     );
