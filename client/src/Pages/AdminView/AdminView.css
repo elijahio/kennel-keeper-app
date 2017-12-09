@@ -2,9 +2,9 @@
 	/*background: rgba(0, 0, 0, 1.0);*/
 	color: red;
 	padding-bottom: 20px;
-	background: -moz-linear-gradient(top, rgba(28,28,28,0) 0%, rgba(19,19,19,0.98) 45%, rgba(19,19,19,1) 46%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, rgba(28,28,28,0) 0%,rgba(19,19,19,0.98) 45%,rgba(19,19,19,1) 46%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, rgba(28,28,28,0) 0%,rgba(19,19,19,0.98) 45%,rgba(19,19,19,1) 46%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	background: -moz-linear-gradient(top, rgba(28,28,28,0) 0%, rgba(19,19,19,0.98) 25%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba(28,28,28,0) 0%,rgba(19,19,19,0.98) 25%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(28,28,28,0) 0%,rgba(19,19,19,0.98) 25%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#001c1c1c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
 }
 

@@ -1,4 +1,13 @@
 .taskList {
 	margin-top: 20px;
+}
 
+.volunteerPanel {
+	font-family: 'Open Sans', sans-serif;
+	color: #6694ac !important;
+}
+
+.list-group-item {
+	background-color: transparent;
+	cursor: url(/images/cursor.gif),url(/images/cursor.cur), w-resize;;
 }

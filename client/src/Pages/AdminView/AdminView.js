@@ -216,7 +216,7 @@ class AdminView extends Component {
                       />
                       <FormBtn
                         onClick={this.handleUserFormSubmit}
-                        > Add User
+                        > Add Volunteer
                         </FormBtn>
                     </form>
                   </div>
@@ -242,7 +242,7 @@ class AdminView extends Component {
                     // disabled={!(this.state.taskname)}
                     onClick={this.handleGenTaskFormSubmit}
                   >
-                    Add
+                    Add Task
                   </FormBtn>
                 </form>
               </div>
@@ -298,7 +298,7 @@ class AdminView extends Component {
                     value={this.state.dogName}
                     onChange={this.handleInputChange}
                     name="dogName"
-                    placeholder="Doggo Name"
+                    placeholder="Dog Name"
                   />
                   <Input
                     className="form-field"

@@ -4,7 +4,7 @@ import "./DeleteBtn.css";
 
 const DeleteBtn = props => (
   <span className="delete-btn" {...props}>
-    Delete
+    <i className="fa fa-trash-o" aria-hidden="true"></i>
   </span>
 );
 
