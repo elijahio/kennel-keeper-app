@@ -135,3 +135,7 @@ input[type=submit]:hover {
 	bottom: 0;
 	left: 0;
 }
+
+.details-text {
+	font-size: 14px !important;
+}
