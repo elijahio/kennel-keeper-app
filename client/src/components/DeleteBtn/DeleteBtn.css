@@ -1,6 +1,15 @@
 .delete-btn {
-  float: right;
-  color: #e74944;
-  margin-left: -12px;
-  cursor: pointer;
+    float: right;
+    color: darkred;
+    margin-left: -20px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+    float: right;
+    color: red;
+    margin-left: 150px;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
 }
